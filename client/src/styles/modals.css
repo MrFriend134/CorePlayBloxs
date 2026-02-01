@@ -1,0 +1,142 @@
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 1rem;
+}
+.modal {
+  background: var(--cpb-panel);
+  border-radius: 12px;
+  border: 1px solid var(--cpb-green-dark);
+  max-width: 440px;
+  width: 100%;
+  max-height: 90vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid var(--cpb-card);
+}
+.modal-header h2 {
+  font-size: 1.25rem;
+  color: var(--cpb-text);
+}
+.modal-close {
+  background: none;
+  color: var(--cpb-muted);
+  font-size: 1.5rem;
+  line-height: 1;
+  padding: 0 0.25rem;
+}
+.modal-close:hover {
+  color: var(--cpb-text);
+}
+.modal-body {
+  padding: 1.25rem;
+  overflow-y: auto;
+}
+.modal-auth label {
+  display: block;
+  margin-bottom: 1rem;
+  color: var(--cpb-muted);
+  font-size: 0.9rem;
+}
+.modal-auth input {
+  width: 100%;
+  margin-top: 0.25rem;
+  padding: 0.6rem 0.75rem;
+  border-radius: 8px;
+  border: 1px solid var(--cpb-green-dark);
+  background: var(--cpb-card);
+  color: var(--cpb-text);
+}
+.form-error {
+  color: #f44336;
+  font-size: 0.9rem;
+  margin-bottom: 0.75rem;
+}
+.success-msg {
+  color: var(--cpb-green-light);
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+.modal-auth .btn-primary {
+  width: 100%;
+  padding: 0.7rem;
+  margin-top: 0.5rem;
+  border-radius: 8px;
+  background: var(--cpb-green);
+  color: #fff;
+  font-weight: 600;
+}
+.auth-switch {
+  margin-top: 1rem;
+  text-align: center;
+  color: var(--cpb-muted);
+  font-size: 0.9rem;
+}
+.link-btn {
+  background: none;
+  color: var(--cpb-green-light);
+  padding: 0;
+  text-decoration: underline;
+}
+.btn-primary { background: var(--cpb-green); color: #fff; padding: 0.5rem 1rem; border-radius: 8px; font-weight: 600; }
+.btn-secondary { background: var(--cpb-card); color: var(--cpb-text); padding: 0.5rem 1rem; border-radius: 8px; margin-top: 0.5rem; }
+.btn-small { padding: 0.35rem 0.75rem; font-size: 0.85rem; border-radius: 6px; }
+
+.settings-body .settings-row { display: flex; justify-content: space-between; margin-bottom: 0.5rem; }
+.settings-hr { margin: 1rem 0; border: none; border-top: 1px solid var(--cpb-card); }
+.admin-unlock { display: flex; gap: 0.5rem; margin-top: 0.5rem; }
+.admin-unlock input { flex: 1; padding: 0.5rem; border-radius: 6px; border: 1px solid var(--cpb-green-dark); background: var(--cpb-card); color: var(--cpb-text); }
+
+.friends-body .search-input { width: 100%; margin-bottom: 0.75rem; padding: 0.5rem; border-radius: 6px; border: 1px solid var(--cpb-green-dark); background: var(--cpb-card); color: var(--cpb-text); }
+.friends-body h3 { margin: 1rem 0 0.5rem; font-size: 1rem; }
+.friends-list, .friends-search-list { list-style: none; }
+.friends-list li, .friends-search-list li { display: flex; align-items: center; justify-content: space-between; padding: 0.5rem 0; border-bottom: 1px solid var(--cpb-card); }
+.muted { color: var(--cpb-muted); font-size: 0.9rem; }
+
+.avatar-body label { display: block; margin-bottom: 0.75rem; color: var(--cpb-muted); font-size: 0.9rem; }
+.avatar-preview-wrap { display: flex; justify-content: center; margin-bottom: 1rem; }
+.avatar-preview { width: 80px; height: 120px; border-radius: 8px; position: relative; }
+.avatar-head { position: absolute; top: 8px; left: 50%; transform: translateX(-50%); width: 40px; height: 40px; border-radius: 50%; background: inherit; box-shadow: inset 0 -4px 0 rgba(0,0,0,0.2); }
+.avatar-body-simple { position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); width: 50px; height: 70px; border-radius: 8px 8px 0 0; background: inherit; }
+.skin-colors { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-top: 0.25rem; }
+.skin-swatch { width: 28px; height: 28px; border-radius: 50%; border: 2px solid transparent; }
+.skin-swatch:hover, .skin-picker { margin-left: 0.5rem; }
+.skin-picker { width: 40px; height: 28px; padding: 0; border: none; background: none; cursor: pointer; vertical-align: middle; }
+.accessories-list { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.25rem; }
+.acc-badge { padding: 0.35rem 0.75rem; background: var(--cpb-card); border-radius: 6px; font-size: 0.85rem; }
+
+.catalog-wrap { padding: 1rem; }
+.catalog-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; }
+.catalog-header h2 { font-size: 1.25rem; }
+.catalog-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 1rem; }
+.catalog-item { background: var(--cpb-card); border-radius: 10px; padding: 1rem; text-align: center; border: 1px solid rgba(0,166,81,0.2); }
+.catalog-item-thumb { font-size: 2rem; margin-bottom: 0.5rem; }
+.catalog-item h3 { font-size: 1rem; margin-bottom: 0.25rem; }
+.catalog-item .price { color: #ffc107; font-size: 0.9rem; margin-bottom: 0.5rem; }
+.catalog-item .owned { font-size: 0.8rem; color: var(--cpb-green-light); }
+
+.robux-body .robux-balance { font-size: 1.1rem; margin-bottom: 0.5rem; }
+.robux-amount { color: #ffc107; }
+.redeem-form { display: flex; gap: 0.5rem; margin: 0.5rem 0; }
+.redeem-form input { flex: 1; padding: 0.5rem; border-radius: 6px; border: 1px solid var(--cpb-green-dark); background: var(--cpb-card); color: var(--cpb-text); }
+.small { font-size: 0.8rem; color: var(--cpb-muted); margin-top: 0.5rem; }
+
+.admin-panel .modal { max-width: 560px; }
+.admin-body h3 { margin: 1rem 0 0.5rem; font-size: 1rem; }
+.admin-form { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 0.5rem; }
+.admin-form input { padding: 0.5rem; border-radius: 6px; border: 1px solid var(--cpb-green-dark); background: var(--cpb-card); color: var(--cpb-text); width: 120px; }
+.admin-users-list { max-height: 240px; overflow-y: auto; }
+.admin-user-row { display: flex; align-items: center; gap: 0.75rem; padding: 0.5rem 0; border-bottom: 1px solid var(--cpb-card); font-size: 0.9rem; }
+.admin-user-row span:first-child { flex: 1; }

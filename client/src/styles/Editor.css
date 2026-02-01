@@ -1,0 +1,177 @@
+.editor-view {
+  display: grid;
+  grid-template-columns: 1fr 280px;
+  grid-template-rows: auto 1fr;
+  grid-template-areas:
+    "header header"
+    "canvas sidebar";
+  height: 100vh;
+  background: var(--cpb-bg);
+}
+
+.editor-header {
+  grid-area: header;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.5rem 1rem;
+  background: var(--cpb-panel);
+  border-bottom: 2px solid var(--cpb-green-dark);
+}
+.editor-back, .editor-play {
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  background: var(--cpb-card);
+  color: var(--cpb-text);
+  font-weight: 600;
+}
+.editor-back:hover, .editor-play:hover {
+  background: var(--cpb-green-dark);
+  color: var(--cpb-green-light);
+}
+.editor-play {
+  margin-left: auto;
+  background: var(--cpb-green);
+  color: #fff;
+}
+.editor-title {
+  font-weight: 700;
+  color: var(--cpb-green);
+  font-size: 1.1rem;
+}
+
+.editor-toolbar {
+  position: absolute;
+  top: 50px;
+  left: 10px;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  background: rgba(22, 33, 62, 0.9);
+  border-radius: 8px;
+  border: 1px solid var(--cpb-green-dark);
+}
+.editor-toolbar button {
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  background: var(--cpb-card);
+  color: var(--cpb-text);
+  font-size: 0.85rem;
+}
+.editor-toolbar button.active {
+  background: var(--cpb-green);
+  color: #fff;
+}
+.color-strip {
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+.color-swatch {
+  width: 24px;
+  height: 24px;
+  border-radius: 4px;
+  border: 2px solid transparent;
+  padding: 0;
+}
+.color-swatch:hover {
+  border-color: #fff;
+}
+
+.editor-canvas {
+  grid-area: canvas;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+}
+.editor-canvas canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.editor-sidebar {
+  grid-area: sidebar;
+  padding: 1rem;
+  background: var(--cpb-panel);
+  border-left: 1px solid var(--cpb-green-dark);
+  overflow-y: auto;
+}
+.editor-sidebar h3 {
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+  color: var(--cpb-green-light);
+}
+.objects-list {
+  list-style: none;
+  margin-bottom: 1rem;
+}
+.objects-list li {
+  padding: 0.35rem 0.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+.objects-list li:hover {
+  background: var(--cpb-card);
+}
+.objects-list li.selected {
+  background: var(--cpb-green-dark);
+  color: var(--cpb-green-light);
+}
+.script-editor {
+  width: 100%;
+  min-height: 160px;
+  padding: 0.5rem;
+  border-radius: 6px;
+  border: 1px solid var(--cpb-green-dark);
+  background: var(--cpb-card);
+  color: var(--cpb-text);
+  font-family: 'Consolas', 'Monaco', monospace;
+  font-size: 0.85rem;
+  resize: vertical;
+}
+.btn-run-lua {
+  width: 100%;
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 6px;
+  background: var(--cpb-green);
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+.btn-run-lua:hover:not(:disabled) {
+  background: var(--cpb-green-light);
+}
+.btn-run-lua:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+.lua-console {
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  max-height: 120px;
+  overflow-y: auto;
+  background: #0d1117;
+  border-radius: 6px;
+  font-family: Consolas, Monaco, monospace;
+  font-size: 0.8rem;
+  color: #c9d1d9;
+}
+.lua-console-error {
+  color: #f85149;
+  margin-bottom: 0.25rem;
+}
+.lua-console-line {
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+.script-hint {
+  font-size: 0.75rem;
+  color: var(--cpb-muted);
+  margin-top: 0.5rem;
+}

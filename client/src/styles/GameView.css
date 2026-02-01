@@ -1,0 +1,105 @@
+.game-view {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background: var(--cpb-bg);
+}
+
+.game-ui-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem 1rem;
+  background: linear-gradient(180deg, rgba(0,0,0,0.5) 0%, transparent 100%);
+  z-index: 10;
+}
+.game-back-btn {
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  background: var(--cpb-panel);
+  color: var(--cpb-text);
+  font-weight: 600;
+  border: 1px solid var(--cpb-green-dark);
+}
+.game-back-btn:hover {
+  background: var(--cpb-card);
+  color: var(--cpb-green-light);
+}
+.game-title {
+  font-weight: 700;
+  color: var(--cpb-green-light);
+  font-size: 1.1rem;
+}
+.game-status {
+  margin-left: auto;
+  font-size: 0.85rem;
+  color: var(--cpb-muted);
+}
+
+.game-canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.game-canvas canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.game-chat {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  max-height: 220px;
+  background: linear-gradient(0deg, rgba(0,0,0,0.7) 0%, transparent 100%);
+  padding: 0.5rem 1rem 1rem;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.chat-messages {
+  overflow-y: auto;
+  max-height: 140px;
+  font-size: 0.9rem;
+  color: var(--cpb-text);
+}
+.chat-msg {
+  margin-bottom: 0.25rem;
+  word-break: break-word;
+}
+.chat-msg strong {
+  color: var(--cpb-green-light);
+  margin-right: 0.25rem;
+}
+.chat-form {
+  display: flex;
+  gap: 0.5rem;
+}
+.chat-form input {
+  flex: 1;
+  padding: 0.5rem 0.75rem;
+  border-radius: 8px;
+  border: 1px solid var(--cpb-green-dark);
+  background: var(--cpb-panel);
+  color: var(--cpb-text);
+  font-size: 0.95rem;
+}
+.chat-form input:focus {
+  outline: none;
+  border-color: var(--cpb-green);
+}
+.chat-form button {
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  background: var(--cpb-green);
+  color: #fff;
+  font-weight: 600;
+}
